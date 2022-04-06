@@ -5,7 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sf: ["SF Pro Display", "san-serif"],
+      },
       colors: {
+        medgray: "#aaaaaa",
         darkgray: "#313132",
         lightgray: "#f3f3f6",
         green: "#3b9f50",

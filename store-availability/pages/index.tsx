@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 const Home: NextPage = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">test if it is working</h1>
+      <h1 className="text-3xl font-sf font-medium">Store availability</h1>
     </div>
   );
 };
