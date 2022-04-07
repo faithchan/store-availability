@@ -1,7 +1,8 @@
 import React from "react";
+import { phones } from "../data/dummydata";
 
 const CategoryBar = () => {
-  return <div>CategoryBar</div>;
+  return <div>{phones.map}</div>;
 };
 
 export default CategoryBar;

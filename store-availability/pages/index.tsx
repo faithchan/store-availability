@@ -4,11 +4,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
-  return (
-    <div>
-      <h1 className="text-3xl font-sf font-medium">Store availability</h1>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Home;

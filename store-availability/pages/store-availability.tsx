@@ -1,13 +1,8 @@
 import React from "react";
+import ProductSearch from "../components/ProductSearch";
 
 const storeavailability = () => {
-  return (
-    <div>
-      <h1 className="my-12 font-medium text-center text-5xl">
-        Store availability
-      </h1>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default storeavailability;
