@@ -4,10 +4,6 @@ import { iPhone13ProSpecs } from "../data/dummydata";
 
 const ProductCard = () => {
   const { currentProduct } = useContext(GlobalContext);
-  // console.log(iPhone13ProSpecs);
-  const colours = iPhone13ProSpecs.finish;
-  const cols = Object.keys(colours);
-  console.log(cols);
 
   return (
     <div className="mx-20 mt-3 flex justify-center">

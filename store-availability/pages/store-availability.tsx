@@ -22,7 +22,11 @@ const storeavailability = () => {
   return (
     <div className="mx-auto">
       {productFamily === "iPhone" ? <CategoryBar /> : ""}
-      {currentProduct === "iPhone 13 Pro" ? <ProductCard /> : ""}
+      {currentProduct === "iPhone 13 Pro" && productFamily === "iPhone" ? (
+        <ProductCard />
+      ) : (
+        ""
+      )}
     </div>
   );
 };
