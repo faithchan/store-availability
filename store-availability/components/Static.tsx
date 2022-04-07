@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 const Static = ({ children }: { children: any }) => {
   return (
-    <div>
+    <div className="bg-lightgray ">
       <Navbar />
       <main>{children}</main>
     </div>
