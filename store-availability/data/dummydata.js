@@ -10,11 +10,16 @@ const products = [
   "Accessories",
 ];
 
-const stores = {
-  mbs: "Marina Bay Sands",
-  or: "Orchard Road",
-  jc: "Jewel Changi Airport",
-};
+const stores = [
+  {
+    mbs: "Marina Bay Sands",
+    address: "2 Bayfront Avenue B2-06",
+    postal: "Singapore, 018962",
+    opening: " Mon - Sun:   10:00 AM - 10:00 PM",
+  },
+  { or: "Orchard Road" },
+  { jc: "Jewel Changi Airport" },
+];
 
 const phones = [
   "iPhone 13",
