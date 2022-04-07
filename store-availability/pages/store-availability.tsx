@@ -17,7 +17,7 @@ const storeavailability = () => {
 
   return (
     <div className="mx-auto">
-      <CategoryBar />
+      {productFamily === "iPhone" ? <CategoryBar /> : ""}
     </div>
   );
 };
