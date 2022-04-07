@@ -10,7 +10,7 @@ const products = [
   "Accessories",
 ];
 
-const stores = [
+const storeDetails = [
   {
     mbs: "Marina Bay Sands",
     address: "2 Bayfront Avenue B2-06",
@@ -19,6 +19,20 @@ const stores = [
   },
   { or: "Orchard Road" },
   { jc: "Jewel Changi Airport" },
+  {
+    "All Stores": {
+      mbs: "Marina Bay Sands",
+      or: "Orchard Road",
+      jc: "Jewel Changi Airport",
+    },
+  },
+];
+
+const stores = [
+  "All Stores",
+  "Jewel Changi Airport",
+  "Marina Bay Sands",
+  "Orchard Road",
 ];
 
 const phones = [
@@ -54,4 +68,11 @@ const checkIphone13Pro = [
   },
 ];
 
-export { products, stores, checkIphone13Pro, phones, iPhone13ProSpecs };
+export {
+  products,
+  stores,
+  checkIphone13Pro,
+  phones,
+  iPhone13ProSpecs,
+  storeDetails,
+};

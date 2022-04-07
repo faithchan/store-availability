@@ -1,5 +1,6 @@
 import React from "react";
 import { phones } from "../data/dummydata";
+import GlobalContext from "../context/context";
 
 const CategoryBar = () => {
   return (

@@ -10,12 +10,15 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [store, setStore] = useState("");
   const [currentProduct, setCurrentProduct] = useState("");
   const [savedItems, setSavedItems] = useState([]);
-
+  const [selectProductFamily, setSelectProductFamily] = useState("");
   const valueStorage = {
+    selectProductFamily: selectProductFamily,
     productFamily: productFamily,
     store: store,
     currentProduct: currentProduct,
     savedItems: savedItems,
+    setSelectProductFamily: (selectProductFamily: string) =>
+      setSelectProductFamily(selectProductFamily),
     setProductFamily: (productFamily: string) =>
       setProductFamily(productFamily),
     setStore: (store: string) => setStore(store),
