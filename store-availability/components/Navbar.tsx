@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="bg-darkgray">
       <nav className="flex px-32 py-2 place-content-between">
         <span className="mt-2 w-8">
-          <Link href="/">
+          <Link href="/store-availability">
             <a>
               <Image src={logo} alt="Logo" />
             </a>
@@ -21,10 +21,8 @@ const Navbar = () => {
                 <a>Store availability</a>
               </Link>
             </li>
-            <li className="ml-10 transition ease-in-out hover:text-lightgray">
-              <Link href="/">
-                <a>SG</a>
-              </Link>
+            <li className="ml-10 transition ease-in-out hover:text-lightgray cursor-pointer">
+              SG
             </li>
           </ul>
         </span>

@@ -29,7 +29,10 @@ const ProductCard = () => {
             </p>
             <div className="flex justify-between space-x-2">
               {iPhone13ProSpecs.model.map((eachmod) => (
-                <button className="bg-white text-xs font-bold border rounded-md w-full py-2 hover:border-blueselector">
+                <button
+                  className="bg-white text-xs font-bold border rounded-md w-full py-2 hover:border-blueselector"
+                  key={eachmod}
+                >
                   {eachmod}
                 </button>
               ))}
@@ -45,7 +48,10 @@ const ProductCard = () => {
             </p>
             <div className="grid grid-cols-2 gap-2 justify-between ">
               {iPhone13ProSpecs.capacity.map((cap) => (
-                <button className="bg-white text-xs font-bold border rounded-md w-full py-2 hover:border-blueselector">
+                <button
+                  className="bg-white text-xs font-bold border rounded-md w-full py-2 hover:border-blueselector"
+                  key={cap}
+                >
                   {cap}
                 </button>
               ))}
