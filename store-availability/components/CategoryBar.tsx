@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { phones } from "../data/dummydata";
 import GlobalContext from "../context/context";
 
 const CategoryBar = () => {
   const { currentProduct, setCurrentProduct } = useContext(GlobalContext);
-
+  useEffect(() => setCurrentProduct(""), []);
   return (
     <div className="flex justify-center px-2 ">
       <div className="space-x-2.5">
