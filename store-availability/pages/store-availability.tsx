@@ -2,6 +2,7 @@ import React from "react";
 import CategoryBar from "../components/CategoryBar";
 import { useContext, useEffect } from "react";
 import GlobalContext from "../context/context";
+import ProductCard from "../components/ProductCard";
 
 const storeavailability = () => {
   const {
@@ -21,6 +22,7 @@ const storeavailability = () => {
   return (
     <div className="mx-auto">
       {productFamily === "iPhone" ? <CategoryBar /> : ""}
+      {currentProduct === "iPhone 13 Pro" ? <ProductCard /> : ""}
     </div>
   );
 };

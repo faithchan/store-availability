@@ -1,7 +1,7 @@
 import React from "react";
 
 const ProductCard = () => {
-  return <div>ProductCard</div>;
+  return <div>Display iPhone Product Card</div>;
 };
 
 export default ProductCard;

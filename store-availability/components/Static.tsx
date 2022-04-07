@@ -22,7 +22,7 @@ const Static = ({ children }: { children: any }) => {
           <ProductSearch />
           <StoreSearch />
           <button
-            className="ml-3 bg-lightgray px-10 border-2 rounded-md w-40 h-11.5"
+            className="ml-3 bg-lightgray px-10 border-2 rounded-md w-40 h-11.5 "
             onClick={() => setProductFamily(selectProductFamily)}
           >
             Go
