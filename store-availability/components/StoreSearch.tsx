@@ -25,7 +25,7 @@ const StoreSearch = () => {
             <Listbox.Option
               key={each}
               value={each}
-              className="cursor-pointer px-5 py-1.5 text-sm"
+              className="cursor-pointer px-5 py-1.5 text-sm hover:text-gray-500 hover:font-bold hover:bg-lightgray"
             >
               {each}
             </Listbox.Option>
