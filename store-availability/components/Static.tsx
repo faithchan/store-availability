@@ -14,7 +14,7 @@ const Static = ({ children }: { children: any }) => {
         <div className="flex px-5 justify-center">
           <ProductSearch />
           <StoreSearch />
-          <button className="ml-3 bg-lightgray px-10 border-2 rounded-md w-36">
+          <button className="ml-3 bg-lightgray px-10 border-2 rounded-md w-40">
             Go
           </button>
         </div>
