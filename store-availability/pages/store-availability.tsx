@@ -1,8 +1,12 @@
 import React from "react";
-import ProductSearch from "../components/ProductSearch";
+import CategoryBar from "../components/CategoryBar";
 
 const storeavailability = () => {
-  return <div></div>;
+  return (
+    <div className=" mx-auto">
+      <CategoryBar />
+    </div>
+  );
 };
 
 export default storeavailability;
