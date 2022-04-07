@@ -19,7 +19,7 @@ module.exports = {
         gold: "#f9e8d3",
         alpinegreen: "#4d5d4c",
         graphite: "#514f4d",
-        sierrablue: "#514f4d",
+        sierrablue: "#a6bfd6",
         blueselector: "#0066cc",
       },
     },

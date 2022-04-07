@@ -1,9 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import GlobalContext from "../context/context";
 import { iPhone13ProSpecs } from "../data/dummydata";
 
 const ProductCard = () => {
   const { currentProduct } = useContext(GlobalContext);
+  // console.log(iPhone13ProSpecs);
+  const colours = iPhone13ProSpecs.finish;
+  const cols = Object.keys(colours);
+  console.log(cols);
+
   return (
     <div className="mx-20 mt-3 flex justify-center">
       <div className="bg-white w-fit text-center  rounded-xl border">
@@ -30,7 +35,7 @@ const ProductCard = () => {
             <div className="flex justify-between space-x-2">
               {iPhone13ProSpecs.model.map((eachmod) => (
                 <button
-                  className="bg-white text-xs font-bold border rounded-md w-full py-2 hover:border-blueselector"
+                  className="bg-white text-xs font-bold border rounded-md w-full py-2 hover:border-blueselector  focus:outline-none focus:ring-1 focus:ring-blueselector "
                   key={eachmod}
                 >
                   {eachmod}
@@ -41,7 +46,23 @@ const ProductCard = () => {
             <p className="text-left font-medium mt-4 mb-2 tracking-wider">
               Finish
             </p>
-            <div className="flex space-x-2"></div>
+            <div className="flex space-x-4">
+              <button
+                className={`rounded-full w-8 h-8 bg-alpinegreen hover:border-blueselector  focus:outline-none focus:ring-1 focus:ring-blueselector`}
+              />
+              <button
+                className={`rounded-full w-8 h-8 bg-silver hover:border-blueselector  focus:outline-none focus:ring-1 focus:ring-blueselector`}
+              />
+              <button
+                className={`rounded-full w-8 h-8 bg-gold hover:border-blueselector  focus:outline-none focus:ring-1 focus:ring-blueselector`}
+              />
+              <button
+                className={`rounded-full w-8 h-8 bg-graphite hover:border-blueselector  focus:outline-none focus:ring-1 focus:ring-blueselector`}
+              />
+              <button
+                className={`rounded-full w-8 h-8 bg-sierrablue hover:border-blueselector  focus:outline-none focus:ring-1 focus:ring-blueselector`}
+              />
+            </div>
             {/* Capacity Section */}
             <p className="text-left font-medium mt-4 mb-2 tracking-wider">
               Capacity
@@ -49,7 +70,7 @@ const ProductCard = () => {
             <div className="grid grid-cols-2 gap-2 justify-between ">
               {iPhone13ProSpecs.capacity.map((cap) => (
                 <button
-                  className="bg-white text-xs font-bold border rounded-md w-full py-2 hover:border-blueselector"
+                  className="bg-white text-xs font-bold border rounded-md w-full py-2 hover:border-blueselector  focus:outline-none focus:ring-1 focus:ring-blueselector "
                   key={cap}
                 >
                   {cap}

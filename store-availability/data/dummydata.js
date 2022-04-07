@@ -46,13 +46,13 @@ const phones = [
 const iPhone13ProSpecs = {
   product: "iPhone 13 Pro",
   model: ["13 Pro", "13 Pro Max"],
-  finish: [
-    { "#4d5d4c": "Alpine Green" },
-    { "#f0f1ec": "Silver" },
-    { "#f9e8d3": "Gold" },
-    { "#514f4d": "Graphite" },
-    { "#a6bfd6": "Sierra Blue" },
-  ],
+  finish: {
+    alpinegreen: "Alpine Green",
+    silver: "Silver",
+    gold: "Gold",
+    graphite: "Graphite",
+    sierrablue: "Sierra Blue",
+  },
   capacity: ["128GB", "256GB", "512GB", "1TB"],
 };
 
