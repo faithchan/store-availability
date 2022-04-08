@@ -141,8 +141,8 @@ const ProductCard = () => {
             {/* Store box display for MBS if available*/}
             {selectedProduct.store === "All Stores" ||
             selectedProduct.store === "Marina Bay Sands" ? (
-              <div className="flex bg-white border p-3 rounded-lg mr-5 ml-10 justify-between">
-                <p className="text-xs font-bold my-auto">
+              <div className="flex bg-white border p-3 rounded-lg mr-4 ml-10 justify-between">
+                <p className="text-xs mr-1 font-bold my-auto">
                   Apple Marina Bay Sands
                 </p>
                 <button className="bg-white py-2 px-6 border border-green rounded-lg text-green text-xs font-sf ml-20">
@@ -155,7 +155,11 @@ const ProductCard = () => {
             {/* Store box display for Jewel if available*/}
             {selectedProduct.store === "All Stores" ||
             selectedProduct.store === "Jewel Changi Airport" ? (
-              <div className="flex bg-white border p-3 rounded-lg mr-4 ml-10 justify-between mt-2">
+              <div
+                className={`flex bg-white border p-3 rounded-lg mr-4 ml-10 justify-between ${
+                  selectedProduct.store === "All Stores" ? "mt-2" : ""
+                }`}
+              >
                 <p className="text-xs font-bold my-auto">
                   Apple Jewel Changi Airport
                 </p>
@@ -169,8 +173,12 @@ const ProductCard = () => {
             {/* Store box display for Orchard if available*/}
             {selectedProduct.store === "All Stores" ||
             selectedProduct.store === "Orchard Road" ? (
-              <div className="flex bg-white border p-3 rounded-lg mr-3 ml-10 justify-between mt-2">
-                <p className="text-xs font-bold my-auto mr-4">
+              <div
+                className={`flex bg-white border p-3 rounded-lg mr-4 ml-10 justify-between ${
+                  selectedProduct.store === "All Stores" ? "mt-2" : ""
+                }`}
+              >
+                <p className="text-xs font-bold my-auto mr-3">
                   Apple Orchard Road
                 </p>
                 <button className="bg-white py-2 px-6 border border-green rounded-lg text-green text-xs font-sf ml-24">
