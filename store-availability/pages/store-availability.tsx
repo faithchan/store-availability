@@ -5,7 +5,7 @@ import GlobalContext from "../context/context";
 import ProductCard from "../components/ProductCard";
 import SavedItems from "../components/SavedItems";
 
-const storeavailability = () => {
+const Storeavailability = () => {
   const {
     selectProductFamily,
     productFamily,
@@ -33,4 +33,4 @@ const storeavailability = () => {
   );
 };
 
-export default storeavailability;
+export default Storeavailability;

@@ -18,12 +18,18 @@ const SavedItems = () => {
           </div>
           {savedItems.length > 0 ? (
             savedItems.map((item: any) => (
-              <div className="text-sm py-4 px-12 flex justify-between">
-                <p className="my-auto">
+              <div
+                className="text-sm py-4 px-12 flex justify-between"
+                key={item.price}
+              >
+                <p className="my-auto" key={item.price}>
                   {item.model} {item.capacity} {item.finish} {item.price} @
                   {item.selectedStore}
                 </p>
-                <button className="text-xs text-medgray border px-8 rounded-lg py-2 transition ease-in-out hover:text-dropdown hover:border-dropdown">
+                <button
+                  className="text-xs text-medgray border px-8 rounded-lg py-2 transition ease-in-out hover:text-dropdown hover:border-dropdown"
+                  key={item.price}
+                >
                   Delete
                 </button>
               </div>
