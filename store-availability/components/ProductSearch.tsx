@@ -17,7 +17,7 @@ const ProductSearch = () => {
   return (
     <div className="w-72 mr-3 ">
       <Listbox value={selectProductFamily} onChange={setSelectProductFamily}>
-        <Listbox.Button className="inline-flex justify-between w-72 rounded-md border bg-white py-3 px-4 mr-3">
+        <Listbox.Button className="inline-flex justify-between w-72 rounded-lg border bg-white py-3 px-4 mr-3">
           <p className="mr-14 my-auto text-sm text-gray-400">
             {selectProductFamily}{" "}
           </p>

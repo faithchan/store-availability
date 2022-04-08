@@ -17,7 +17,7 @@ const Static = ({ children }: { children: any }) => {
       <h1 className="my-12 font-medium text-center text-5xl">
         Store availability
       </h1>
-      <div className="px-32">
+      <div className="px-32 bg-lightgray h-screen">
         <div className="flex px-5 justify-center ">
           <ProductSearch />
           <StoreSearch />
