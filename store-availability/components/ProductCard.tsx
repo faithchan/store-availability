@@ -12,6 +12,7 @@ const ProductCard = () => {
     store,
     productFamily,
   } = useContext(GlobalContext);
+
   console.log(selectedProduct);
   const [model, setModel] = useState("");
   const [finish, setFinish] = useState("");
@@ -24,7 +25,7 @@ const ProductCard = () => {
     setShowAddress(true);
   };
 
-  console.log(selectedStore);
+  // console.log(selectedStore);
 
   useEffect(() => {
     setSelectedProduct({
@@ -145,13 +146,16 @@ const ProductCard = () => {
             </div>
             {/* Store Availability */}
             <div className="flex px-10">
-              <p className="text-left text-sm font-medium mt-4 mb-2 tracking-wide">
+              <p className="text-left text-sm font-medium mt-4 mb-2 mr-48 tracking-wide">
                 Store Availability:
               </p>
             </div>
             {/* Store box display for MBS if available*/}
             {selectedProduct.store === "All Stores" ||
-            selectedProduct.store === "Marina Bay Sands" ? (
+            (selectedProduct.store === "Marina Bay Sands" &&
+              selectedProduct.model !== "" &&
+              selectedProduct.finish !== "" &&
+              selectedProduct.capacity !== "") ? (
               <div
                 className="flex bg-white border p-3 rounded-lg mr-4 ml-10 justify-between cursor-pointer hover:border-blueselector focus:outline-none focus:ring-1 focus:ring-blueselector"
                 onClick={() => storeHandler("Marina Bay Sands")}
@@ -168,7 +172,10 @@ const ProductCard = () => {
             )}
             {/* Store box display for Jewel if available*/}
             {selectedProduct.store === "All Stores" ||
-            selectedProduct.store === "Jewel Changi Airport" ? (
+            (selectedProduct.store === "Jewel Changi Airport" &&
+              selectedProduct.model !== "" &&
+              selectedProduct.finish !== "" &&
+              selectedProduct.capacity !== "") ? (
               <div
                 className={`flex bg-white border p-3 rounded-lg mr-4 ml-10 justify-between cursor-pointer hover:border-blueselector  focus:outline-none focus:ring-1 focus:ring-blueselector ${
                   selectedProduct.store === "All Stores" ? "mt-2" : ""
@@ -187,7 +194,10 @@ const ProductCard = () => {
             )}
             {/* Store box display for Orchard if available*/}
             {selectedProduct.store === "All Stores" ||
-            selectedProduct.store === "Orchard Road" ? (
+            (selectedProduct.store === "Orchard Road" &&
+              selectedProduct.model !== "" &&
+              selectedProduct.finish !== "" &&
+              selectedProduct.capacity !== "") ? (
               <div
                 className={`flex bg-white border p-3 rounded-lg mr-4 ml-10 justify-between cursor-pointer hover:border-blueselector focus:outline-none focus:ring-1 focus:ring-blueselector ${
                   selectedProduct.store === "All Stores" ? "mt-2" : ""
@@ -208,7 +218,10 @@ const ProductCard = () => {
             {showAddress
               ? storeDetails.map((detail) =>
                   detail.shop === selectedStore ? (
-                    <div className="ml-10 mt-4 mb-5 text-left font-sf text-xs text-medgray">
+                    <div
+                      className="ml-10 mt-4 mb-5 text-left font-sf text-xs text-medgray"
+                      key={detail.shop}
+                    >
                       <p>{detail.address}</p>
                       <p>{detail.postal}</p>
                       <br />

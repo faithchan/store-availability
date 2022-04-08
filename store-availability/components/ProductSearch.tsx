@@ -1,13 +1,8 @@
-import React, { useState, Fragment, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { products } from "../data/dummydata";
-import { Listbox, Transition } from "@headlessui/react";
-import {
-  CheckIcon,
-  SelectorIcon,
-  ChevronDownIcon,
-} from "@heroicons/react/solid";
+import { Listbox } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/solid";
 import GlobalContext from "../context/context";
-import Link from "next/link";
 
 const ProductSearch = () => {
   const { selectProductFamily, setSelectProductFamily } =
