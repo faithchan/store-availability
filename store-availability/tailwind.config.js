@@ -22,6 +22,7 @@ module.exports = {
         sierrablue: "#a6bfd6",
         blueselector: "#0066cc",
         dropdown: "#787979",
+        dropdownbg: "#595a5c",
       },
     },
   },

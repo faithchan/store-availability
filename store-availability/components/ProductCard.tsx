@@ -157,7 +157,7 @@ const ProductCard = () => {
             </div>
             {/* Store Availability */}
             <div className="flex px-10">
-              <p className="text-left text-sm font-medium mt-4 mb-2 mr-52 tracking-wide">
+              <p className="text-left text-sm font-medium mt-2 mb-2 mr-52 tracking-wide">
                 Store Availability:
               </p>
             </div>

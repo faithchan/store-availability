@@ -3,6 +3,7 @@ import CategoryBar from "../components/CategoryBar";
 import { useContext, useEffect } from "react";
 import GlobalContext from "../context/context";
 import ProductCard from "../components/ProductCard";
+import SavedItems from "../components/SavedItems";
 
 const storeavailability = () => {
   const {
@@ -27,6 +28,7 @@ const storeavailability = () => {
       ) : (
         ""
       )}
+      <SavedItems />
     </div>
   );
 };
