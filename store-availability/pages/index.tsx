@@ -1,7 +1,7 @@
-import React from "react";
+import type { NextPage } from "next";
 
-const index = () => {
+const Home: NextPage = () => {
   return <div></div>;
 };
 
-export default index;
+export default Home;
