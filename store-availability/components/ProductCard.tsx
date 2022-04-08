@@ -7,6 +7,8 @@ import { BookmarkIcon } from "@heroicons/react/outline";
 
 const ProductCard = () => {
   const {
+    savedItems,
+    setSavedItems,
     selectedProduct,
     currentProduct,
     setSelectedProduct,
@@ -15,9 +17,11 @@ const ProductCard = () => {
   } = useContext(GlobalContext);
 
   console.log(selectedProduct);
+
   const [model, setModel] = useState("");
   const [finish, setFinish] = useState("");
   const [capacity, setCapacity] = useState("");
+  const [price, setPrice] = useState("");
   const [showAddress, setShowAddress] = useState(false);
   const [selectedStore, setSelectedStore] = useState("");
 
@@ -27,6 +31,7 @@ const ProductCard = () => {
   };
 
   // console.log(selectedStore);
+  console.log(savedItems);
 
   useEffect(() => {
     setSelectedProduct({
@@ -34,10 +39,22 @@ const ProductCard = () => {
       finish: finish,
       capacity: capacity,
       store: store,
+      price: price,
     });
-  }, [model, finish, capacity, store]);
+  }, [model, finish, capacity, store, price]);
 
   useEffect(() => setShowAddress(false), [store]);
+
+  useEffect(() => {
+    selectedProduct.model !== "" && selectedProduct.capacity !== ""
+      ? phonePrices.map((each) =>
+          each.model == selectedProduct.model &&
+          each.capacity == selectedProduct.capacity
+            ? setPrice(each.price)
+            : ""
+        )
+      : "";
+  }, [selectedProduct.model, selectedProduct.capacity]);
 
   const modelHandler = (mod: any) => {
     setModel(mod);
@@ -49,6 +66,10 @@ const ProductCard = () => {
 
   const capacityHandler = (cap: any) => {
     setCapacity(cap);
+  };
+
+  const saveItemHandler = () => {
+    setSavedItems([...savedItems, selectedProduct]);
   };
 
   return (
@@ -141,17 +162,7 @@ const ProductCard = () => {
                     {productFamily} {selectedProduct.model}{" "}
                     {selectedProduct.capacity} {selectedProduct.finish}
                   </p>
-                  {selectedProduct.model !== "" &&
-                  selectedProduct.capacity !== ""
-                    ? phonePrices.map((each) =>
-                        each.model == selectedProduct.model &&
-                        each.capacity == selectedProduct.capacity ? (
-                          <p>{each.price}</p>
-                        ) : (
-                          ""
-                        )
-                      )
-                    : ""}
+                  <p>{price}</p>
                 </span>
               </div>
             </div>
@@ -248,7 +259,10 @@ const ProductCard = () => {
                           <p>{detail.postal}</p>
                         </span>
                         <div>
-                          <button className="bg-blueselector px-6 py-2 mr-3 rounded-lg text-white flex hover:opacity-90">
+                          <button
+                            className="bg-blueselector px-6 py-2 mr-3 rounded-lg text-white flex hover:opacity-90"
+                            onClick={saveItemHandler}
+                          >
                             Save Item
                           </button>
                         </div>

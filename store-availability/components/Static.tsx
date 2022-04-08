@@ -12,12 +12,12 @@ const Static = ({ children }: { children: any }) => {
     selectProductFamily,
   } = useContext(GlobalContext);
   return (
-    <div className="bg-lightgray ">
+    <div className="bg-lightgray h-screen">
       <Navbar />
       <h1 className="my-12 font-medium text-center text-5xl">
         Store availability
       </h1>
-      <div className="px-32 bg-lightgray h-screen">
+      <div className="px-32 bg-lightgray ">
         <div className="flex px-5 justify-center ">
           <ProductSearch />
           <StoreSearch />
