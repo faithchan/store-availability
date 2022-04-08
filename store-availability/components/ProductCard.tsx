@@ -65,7 +65,7 @@ const ProductCard = () => {
   };
 
   const saveItemHandler = () => {
-    setSavedItems([...savedItems, selectedProduct]);
+    setSavedItems((prev: any) => [...prev, selectedProduct]);
   };
 
   const storeHandler = (item: string) => {
@@ -76,7 +76,7 @@ const ProductCard = () => {
     <div className=" mt-3 flex justify-center">
       <div className="bg-white w-fit text-center rounded-xl border ">
         {/* Title Section */}
-        <div className="grid grid-cols-1 my-4 divide-y">
+        <div className="grid grid-cols-1 my-5 divide-y">
           <div className="text-3xl font-sf font-medium pb-4">
             {currentProduct}
           </div>
@@ -84,7 +84,7 @@ const ProductCard = () => {
         </div>
         {/* End of Title Section */}
 
-        <div className="grid grid-cols-5 divide-x text-darkgray -mt-4 ">
+        <div className="grid grid-cols-5 divide-x text-darkgray -mt-5 ">
           <div className="text-sm font-sf pb-4 col-span-2 ml-10 mr-4 my-auto">
             {/* Input Postal Code Section */}
             <input

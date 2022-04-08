@@ -1,26 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useContext } from "react";
 import GlobalContext from "../context/context";
 
 const SavedItems = () => {
   const { savedItems, setSavedItems } = useContext(GlobalContext);
   console.log(savedItems);
+  let uniqueSavedItems = savedItems.map((item: any) => [item["name"], item]);
+  console.log(uniqueSavedItems);
 
   return (
     <div className="mt-6 flex justify-center pb-6 bg-lightgray ">
-      <div className="bg-white text-center rounded-xl border ">
+      <div className="bg-white text-center rounded-xl border mb-10">
         {/* Start of Title and divider */}
-        <div className="grid grid-cols-1 my-4 divide-y w-fit ">
+        <div className="grid grid-cols-1 my-5 divide-y w-fit ">
           <div className="text-3xl font-sf font-medium pb-4 px-72 mx-3">
             Saved Items
           </div>
           {savedItems.length > 0 ? (
             savedItems.map((item: any) => (
-              <div className="text-sm py-4">
-                <p key={item.model}>
+              <div className="text-sm py-4 px-12 flex justify-between">
+                <p className="my-auto">
                   {item.model} {item.capacity} {item.finish} {item.price} @
                   {item.selectedStore}
                 </p>
+                <button className="text-xs text-medgray border px-8 rounded-lg py-2 transition ease-in-out hover:text-dropdown hover:border-dropdown">
+                  Delete
+                </button>
               </div>
             ))
           ) : (
