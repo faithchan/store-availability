@@ -24,12 +24,12 @@ const ProductSearch = () => {
           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5 my-auto text-gray-400" />
         </Listbox.Button>
 
-        <Listbox.Options className="w-72 bg-white text-gray-400 py-2 absolute">
+        <Listbox.Options className="w-48 bg-darkgray text-white py-2 absolute rounded-lg opacity-80">
           {products.map((product) => (
             <Listbox.Option
               key={product}
               value={product}
-              className="cursor-pointer px-5 py-1.5 text-sm hover:text-gray-500 hover:font-bold hover:bg-lightgray"
+              className="cursor-pointer px-5 py-1.5 text-sm  hover:bg-dropdown"
             >
               {product}
             </Listbox.Option>

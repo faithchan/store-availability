@@ -21,6 +21,7 @@ module.exports = {
         graphite: "#514f4d",
         sierrablue: "#a6bfd6",
         blueselector: "#0066cc",
+        dropdown: "#787979",
       },
     },
   },
