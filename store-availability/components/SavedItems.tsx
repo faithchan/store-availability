@@ -19,7 +19,7 @@ const SavedItems = () => {
               <div className="text-sm py-4">
                 <p key={item.model}>
                   {item.model} {item.capacity} {item.finish} {item.price} @
-                  {item.store}
+                  {item.selectedStore}
                 </p>
               </div>
             ))

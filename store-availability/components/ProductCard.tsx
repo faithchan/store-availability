@@ -25,11 +25,6 @@ const ProductCard = () => {
   const [showAddress, setShowAddress] = useState(false);
   const [selectedStore, setSelectedStore] = useState("");
 
-  const storeHandler = (item: string) => {
-    setSelectedStore(item);
-    setShowAddress(true);
-  };
-
   // console.log(selectedStore);
   // console.log(savedItems);
 
@@ -40,8 +35,9 @@ const ProductCard = () => {
       capacity: capacity,
       store: store,
       price: price,
+      selectedStore: selectedStore,
     });
-  }, [model, finish, capacity, store, price]);
+  }, [model, finish, capacity, store, price, selectedStore]);
 
   useEffect(() => setShowAddress(false), [store]);
 
@@ -72,6 +68,10 @@ const ProductCard = () => {
     setSavedItems([...savedItems, selectedProduct]);
   };
 
+  const storeHandler = (item: string) => {
+    setSelectedStore(item);
+    setShowAddress(true);
+  };
   return (
     <div className=" mt-3 flex justify-center">
       <div className="bg-white w-fit text-center rounded-xl border ">
