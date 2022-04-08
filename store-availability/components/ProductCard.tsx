@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import GlobalContext from "../context/context";
-import { iPhone13ProSpecs } from "../data/dummydata";
+import { iPhone13ProSpecs, storeDetails } from "../data/dummydata";
 import iphone from "../public/iphone.png";
 import Image from "next/image";
 
@@ -16,6 +16,15 @@ const ProductCard = () => {
   const [model, setModel] = useState("");
   const [finish, setFinish] = useState("");
   const [capacity, setCapacity] = useState("");
+  const [showAddress, setShowAddress] = useState(false);
+  const [selectedStore, setSelectedStore] = useState("");
+
+  const storeHandler = (item: string) => {
+    setSelectedStore(item);
+    setShowAddress(true);
+  };
+
+  console.log(selectedStore);
 
   useEffect(() => {
     setSelectedProduct({
@@ -25,6 +34,8 @@ const ProductCard = () => {
       store: store,
     });
   }, [model, finish, capacity, store]);
+
+  useEffect(() => setShowAddress(false), [store]);
 
   const modelHandler = (mod: any) => {
     setModel(mod);
@@ -141,7 +152,10 @@ const ProductCard = () => {
             {/* Store box display for MBS if available*/}
             {selectedProduct.store === "All Stores" ||
             selectedProduct.store === "Marina Bay Sands" ? (
-              <div className="flex bg-white border p-3 rounded-lg mr-4 ml-10 justify-between">
+              <div
+                className="flex bg-white border p-3 rounded-lg mr-4 ml-10 justify-between cursor-pointer hover:border-blueselector focus:outline-none focus:ring-1 focus:ring-blueselector"
+                onClick={() => storeHandler("Marina Bay Sands")}
+              >
                 <p className="text-xs mr-1 font-bold my-auto">
                   Apple Marina Bay Sands
                 </p>
@@ -156,9 +170,10 @@ const ProductCard = () => {
             {selectedProduct.store === "All Stores" ||
             selectedProduct.store === "Jewel Changi Airport" ? (
               <div
-                className={`flex bg-white border p-3 rounded-lg mr-4 ml-10 justify-between ${
+                className={`flex bg-white border p-3 rounded-lg mr-4 ml-10 justify-between cursor-pointer hover:border-blueselector  focus:outline-none focus:ring-1 focus:ring-blueselector ${
                   selectedProduct.store === "All Stores" ? "mt-2" : ""
                 }`}
+                onClick={() => storeHandler("Jewel Changi Airport")}
               >
                 <p className="text-xs font-bold my-auto">
                   Apple Jewel Changi Airport
@@ -174,9 +189,10 @@ const ProductCard = () => {
             {selectedProduct.store === "All Stores" ||
             selectedProduct.store === "Orchard Road" ? (
               <div
-                className={`flex bg-white border p-3 rounded-lg mr-4 ml-10 justify-between ${
+                className={`flex bg-white border p-3 rounded-lg mr-4 ml-10 justify-between cursor-pointer hover:border-blueselector focus:outline-none focus:ring-1 focus:ring-blueselector ${
                   selectedProduct.store === "All Stores" ? "mt-2" : ""
                 }`}
+                onClick={() => storeHandler("Orchard Road")}
               >
                 <p className="text-xs font-bold my-auto mr-3">
                   Apple Orchard Road
@@ -189,14 +205,20 @@ const ProductCard = () => {
               ""
             )}
             {/* Store Details */}
-            <div className="ml-10 mt-4 mb-5 text-left font-sf text-xs text-medgray">
-              <p>2 Bayfront Avenue, B2-06</p>
-              <p>Singapore, 018962</p>
-              <br />
-              <p>
-                Mon-Sun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10:00 AM - 10:00 PM
-              </p>
-            </div>
+            {showAddress
+              ? storeDetails.map((detail) =>
+                  detail.shop === selectedStore ? (
+                    <div className="ml-10 mt-4 mb-5 text-left font-sf text-xs text-medgray">
+                      <p>{detail.address}</p>
+                      <p>{detail.postal}</p>
+                      <br />
+                      <p>{detail.opening}</p>
+                    </div>
+                  ) : (
+                    ""
+                  )
+                )
+              : ""}
           </div>
         </div>
       </div>

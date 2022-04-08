@@ -12,19 +12,22 @@ const products = [
 
 const storeDetails = [
   {
-    mbs: "Marina Bay Sands",
+    shop: "Marina Bay Sands",
     address: "2 Bayfront Avenue B2-06",
     postal: "Singapore, 018962",
     opening: " Mon - Sun:   10:00 AM - 10:00 PM",
   },
-  { or: "Orchard Road" },
-  { jc: "Jewel Changi Airport" },
   {
-    "All Stores": {
-      mbs: "Marina Bay Sands",
-      or: "Orchard Road",
-      jc: "Jewel Changi Airport",
-    },
+    shop: "Orchard Road",
+    address: "270 Orchard Rd",
+    postal: "Singapore, 238857",
+    opening: " Mon - Sun:   10:00 AM - 10:00 PM",
+  },
+  {
+    shop: "Jewel Changi Airport",
+    address: "78 Airport Blvd. #02-234",
+    postal: "Singapore, 819666",
+    opening: " Mon - Sun:   10:00 AM - 10:00 PM",
   },
 ];
 
@@ -62,6 +65,7 @@ const checkIphone13Pro = [
     model: "13 Pro",
     finish: "Alpine Green",
     capacity: "256GB",
+    price: "",
     mbs: true,
     or: true,
     jc: true,
