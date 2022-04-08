@@ -3,6 +3,7 @@ import GlobalContext from "../context/context";
 import { iPhone13ProSpecs, storeDetails, phonePrices } from "../data/dummydata";
 import iphone from "../public/iphone.png";
 import Image from "next/image";
+import { BookmarkIcon } from "@heroicons/react/outline";
 
 const ProductCard = () => {
   const {
@@ -132,7 +133,7 @@ const ProductCard = () => {
             {/* Phone Details */}
             <div className="flex px-10">
               <div className="mt-6">
-                <Image src={iphone} width={40} height={40} />
+                <Image src={iphone} width={40} height={45} />
               </div>
               <div className="pl-4 mt-6 text-left font-sf text-sm font-medium tracking-wide ">
                 <span>
@@ -156,12 +157,15 @@ const ProductCard = () => {
             </div>
             {/* Store Availability */}
             <div className="flex px-10">
-              <p className="text-left text-sm font-medium mt-4 mb-2 mr-48 tracking-wide">
+              <p className="text-left text-sm font-medium mt-4 mb-2 mr-52 tracking-wide">
                 Store Availability:
               </p>
             </div>
             {/* Store box display for MBS if available*/}
-            {selectedProduct.store === "All Stores" ||
+            {(selectedProduct.store === "All Stores" &&
+              selectedProduct.model !== "" &&
+              selectedProduct.finish !== "" &&
+              selectedProduct.capacity !== "") ||
             (selectedProduct.store === "Marina Bay Sands" &&
               selectedProduct.model !== "" &&
               selectedProduct.finish !== "" &&
@@ -181,7 +185,10 @@ const ProductCard = () => {
               ""
             )}
             {/* Store box display for Jewel if available*/}
-            {selectedProduct.store === "All Stores" ||
+            {(selectedProduct.store === "All Stores" &&
+              selectedProduct.model !== "" &&
+              selectedProduct.finish !== "" &&
+              selectedProduct.capacity !== "") ||
             (selectedProduct.store === "Jewel Changi Airport" &&
               selectedProduct.model !== "" &&
               selectedProduct.finish !== "" &&
@@ -203,7 +210,10 @@ const ProductCard = () => {
               ""
             )}
             {/* Store box display for Orchard if available*/}
-            {selectedProduct.store === "All Stores" ||
+            {(selectedProduct.store === "All Stores" &&
+              selectedProduct.model !== "" &&
+              selectedProduct.finish !== "" &&
+              selectedProduct.capacity !== "") ||
             (selectedProduct.store === "Orchard Road" &&
               selectedProduct.model !== "" &&
               selectedProduct.finish !== "" &&
@@ -229,11 +239,20 @@ const ProductCard = () => {
               ? storeDetails.map((detail) =>
                   detail.shop === selectedStore ? (
                     <div
-                      className="ml-10 mt-4 mb-5 text-left font-sf text-xs text-medgray"
+                      className="ml-10 mt-4 mb-5 pr-4 text-left font-sf text-xs text-medgray"
                       key={detail.shop}
                     >
-                      <p>{detail.address}</p>
-                      <p>{detail.postal}</p>
+                      <div className="flex justify-between">
+                        <span>
+                          <p>{detail.address}</p>
+                          <p>{detail.postal}</p>
+                        </span>
+                        <div>
+                          <button className="bg-blueselector px-6 py-2 mr-3 rounded-lg text-white flex hover:opacity-90">
+                            Save Item
+                          </button>
+                        </div>
+                      </div>
                       <br />
                       <p>{detail.opening}</p>
                     </div>
