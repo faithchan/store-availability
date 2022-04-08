@@ -72,6 +72,49 @@ const checkIphone13Pro = [
   },
 ];
 
+const phonePrices = [
+  {
+    model: "13 Pro",
+    capacity: "128GB",
+    price: "S$1,649.00",
+  },
+  {
+    model: "13 Pro",
+    capacity: "256GB",
+    price: "S$1,819.00",
+  },
+  {
+    model: "13 Pro",
+    capacity: "512GB",
+    price: "S$2,149.00",
+  },
+  {
+    model: "13 Pro",
+    capacity: "1TB",
+    price: "S$2,479.00",
+  },
+  {
+    model: "13 Pro Max",
+    capacity: "128GB",
+    price: "S$1,799.00",
+  },
+  {
+    model: "13 Pro Max",
+    capacity: "256GB",
+    price: "S$1,969.00",
+  },
+  {
+    model: "13 Pro Max",
+    capacity: "512GB",
+    price: "S$2,299.00",
+  },
+  {
+    model: "13 Pro Max",
+    capacity: "1TB",
+    price: "S$2,629.00",
+  },
+];
+
 export {
   products,
   stores,
@@ -79,4 +122,5 @@ export {
   phones,
   iPhone13ProSpecs,
   storeDetails,
+  phonePrices,
 };

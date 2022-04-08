@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import GlobalContext from "../context/context";
-import { iPhone13ProSpecs, storeDetails } from "../data/dummydata";
+import { iPhone13ProSpecs, storeDetails, phonePrices } from "../data/dummydata";
 import iphone from "../public/iphone.png";
 import Image from "next/image";
 
@@ -140,7 +140,17 @@ const ProductCard = () => {
                     {productFamily} {selectedProduct.model}{" "}
                     {selectedProduct.capacity} {selectedProduct.finish}
                   </p>
-                  <p>S$2,479.00</p>
+                  {selectedProduct.model !== "" &&
+                  selectedProduct.capacity !== ""
+                    ? phonePrices.map((each) =>
+                        each.model == selectedProduct.model &&
+                        each.capacity == selectedProduct.capacity ? (
+                          <p>{each.price}</p>
+                        ) : (
+                          ""
+                        )
+                      )
+                    : ""}
                 </span>
               </div>
             </div>
