@@ -29,6 +29,7 @@ const ProductCard = () => {
   const modelHandler = (mod: any) => {
     setModel(mod);
   };
+
   const finishHandler = (fin: any) => {
     setFinish(fin);
   };
@@ -38,8 +39,8 @@ const ProductCard = () => {
   };
 
   return (
-    <div className="mx-20 mt-3 flex justify-center">
-      <div className="bg-white w-fit text-center  rounded-xl border">
+    <div className=" mt-3 flex justify-center">
+      <div className="bg-white w-fit text-center rounded-xl border ">
         {/* Title Section */}
         <div className="grid grid-cols-1 my-4 divide-y">
           <div className="text-3xl font-sf font-medium pb-4">
@@ -49,8 +50,8 @@ const ProductCard = () => {
         </div>
         {/* End of Title Section */}
 
-        <div className="grid grid-cols-5 divide-x text-darkgray -mt-4">
-          <div className="text-sm font-sf pb-4 col-span-2 ml-10 mr-4">
+        <div className="grid grid-cols-5 divide-x text-darkgray -mt-4 ">
+          <div className="text-sm font-sf pb-4 col-span-2 ml-10 mr-4 my-auto">
             {/* Input Postal Code Section */}
             <input
               placeholder="Enter Postal Code (optional)"
@@ -121,7 +122,7 @@ const ProductCard = () => {
               <div className="mt-6">
                 <Image src={iphone} width={40} height={40} />
               </div>
-              <div className="pl-4 mt-6 text-left">
+              <div className="pl-4 mt-6 text-left font-sf text-sm font-medium tracking-wide ">
                 <span>
                   <p>
                     {productFamily} {selectedProduct.model}{" "}
@@ -130,6 +131,63 @@ const ProductCard = () => {
                   <p>S$2,479.00</p>
                 </span>
               </div>
+            </div>
+            {/* Store Availability */}
+            <div className="flex px-10">
+              <p className="text-left text-sm font-medium mt-4 mb-2 tracking-wide">
+                Store Availability:
+              </p>
+            </div>
+            {/* Store box display for MBS if available*/}
+            {selectedProduct.store === "All Stores" ||
+            selectedProduct.store === "Marina Bay Sands" ? (
+              <div className="flex bg-white border p-3 rounded-lg mr-5 ml-10 justify-between">
+                <p className="text-xs font-bold my-auto">
+                  Apple Marina Bay Sands
+                </p>
+                <button className="bg-white py-2 px-6 border border-green rounded-lg text-green text-xs font-sf ml-20">
+                  Available
+                </button>
+              </div>
+            ) : (
+              ""
+            )}
+            {/* Store box display for Jewel if available*/}
+            {selectedProduct.store === "All Stores" ||
+            selectedProduct.store === "Jewel Changi Airport" ? (
+              <div className="flex bg-white border p-3 rounded-lg mr-4 ml-10 justify-between mt-2">
+                <p className="text-xs font-bold my-auto">
+                  Apple Jewel Changi Airport
+                </p>
+                <button className="bg-white py-2 px-6 border border-green rounded-lg text-green text-xs font-sf ml-16">
+                  Available
+                </button>
+              </div>
+            ) : (
+              ""
+            )}
+            {/* Store box display for Orchard if available*/}
+            {selectedProduct.store === "All Stores" ||
+            selectedProduct.store === "Orchard Road" ? (
+              <div className="flex bg-white border p-3 rounded-lg mr-3 ml-10 justify-between mt-2">
+                <p className="text-xs font-bold my-auto mr-4">
+                  Apple Orchard Road
+                </p>
+                <button className="bg-white py-2 px-6 border border-green rounded-lg text-green text-xs font-sf ml-24">
+                  Available
+                </button>
+              </div>
+            ) : (
+              ""
+            )}
+            {/* Store Details */}
+            <div className="ml-10 mt-4 mb-5 text-left font-sf text-xs text-medgray">
+              <p>2 Bayfront Avenue, B2-06</p>
+              <p>Singapore, 018962</p>
+              <br />
+              <p>
+                Mon-Sun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10:00 AM - 10:00 PM
+              </p>
             </div>
           </div>
         </div>

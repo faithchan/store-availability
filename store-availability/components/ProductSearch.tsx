@@ -24,7 +24,7 @@ const ProductSearch = () => {
           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5 my-auto text-gray-400" />
         </Listbox.Button>
 
-        <Listbox.Options className="w-48 bg-darkgray text-white py-2 absolute rounded-lg opacity-80">
+        <Listbox.Options className="w-48 bg-darkgray text-white py-2 absolute rounded-lg ">
           {products.map((product) => (
             <Listbox.Option
               key={product}
