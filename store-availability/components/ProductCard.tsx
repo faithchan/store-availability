@@ -31,7 +31,7 @@ const ProductCard = () => {
   };
 
   // console.log(selectedStore);
-  console.log(savedItems);
+  // console.log(savedItems);
 
   useEffect(() => {
     setSelectedProduct({
