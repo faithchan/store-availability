@@ -1,34 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SEI7 Project 4 - ARKIV
 
-## Getting Started
+[Apple - Check Store Availability - Demo Link](https://apple-red.vercel.app/store-availability)
 
-First, run the development server:
+[Repo](https://github.com/faithchan/store-availability/tree/main/store-availability)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## 🌌 Introduction
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A Web App to help call agents at Apple check availability for a product at a physical Apple Store. The App aims to showcase a mock up and an example of the aforementioned scenario. The scope of the project touches country, stores in country (particularly Singapore in version 1 of this App), product family, breakdown from the product family (particularly iPhone 13 Pro in version 1 of this App).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 👨🏻‍💻 Project Structure
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Breakdown the products Apple has into Product Families - using the reference of the tabs on apple website
+- Focus on a product product to develop the feature on. iPhone was chosen and the category was broken down into 13 Pro, 13, SE, 12, 11
+- Further narrow on a product that is popular - iPhon 13 Pro was chosen.
+- When the scope has been defined, Ui was created
+- Decide on Tech stack - Nodejs, react framework Nextjs and TypeScript
+- Created Dummy Data
+- Develop Frontend
+- Changes to dummy data based on the final frontend executed
+- Integration and testing
+- Deployment on Vercel
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Follow these steps (Top-Down, Left-Right Approach)
 
-## Learn More
+1. Go to demo link https://apple-red.vercel.app/store-availability
+2. Select Product Family > iPhone
+3. Select Store > All Stores (You may also choose your preferred store).
+4. Click "Go".
+5. The iPhone category list will be displayed. Click "iPhone 13 Pro".
+6. The iPhone Modal to check stock will be displayed. On the top left, IGNORE "Enter Postal Code (optional). Select any Model you prefer.
+7. Select any Finish you prefer.
+8. Select any Capacity you prefer.
+9. Upon successful selection of the product's Model, Finish and Capacity - You will see the price and stores with available stock appear on the right hand side of the Modal.
+10. Click on any of the store you prefer.
+11. The address and opening hours of the store you have selected will appear on the Modal. You will also see a blue button that enables you to save item to the bottom Modal "Saved Items".
+12. Additional Feature (in progress) - While call agents are speaking with customers, they can save customer's requests and can share with customer this list should the customer be willing to share their personal email.
 
-To learn more about Next.js, take a look at the following resources:
+## 💻 Technologies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Tailwindcss
+- React
+- NextJS
+- Typescript
+- HeadlessUI
+- Node.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributors
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Faith @faithchan
