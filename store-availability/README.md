@@ -10,7 +10,7 @@ A Web App to help call agents at Apple check availability for a product at a phy
 
 ## 👨🏻‍💻 Project Structure
 
-- Breakdown the products Apple has into Product Families - using the reference of the tabs on apple website.
+- Breakdown the products Apple has into Product Families - using the reference of the tabs on Apple website.
 - Focus on a product to develop the feature on. iPhone was chosen and the category was broken down into 13 Pro, 13, SE, 12, 11.
 - Further narrow on a product that is popular - iPhon 13 Pro was chosen.
 - When the scope has been defined, Ui was created.
@@ -46,6 +46,20 @@ A Web App to help call agents at Apple check availability for a product at a phy
 - Typescript
 - HeadlessUI
 - Node.js
+
+## ⚙️ Improvements
+
+- When the data has been refined, shift the data to mongoDB.
+- For saved items, it is currently allowing duplicate items if the user clicks twice, the objects in the array should be filtered such that it shows unique items only.
+- Refinements of the css, e.g Go button
+- Implement onClick of Finish to show the name of the colour for accessibility
+- onClick category list, it should show the user which tab are they at by retaining the dark gray bg, can be handled by state or library.
+- Countries panel can have a drop down of all the countries that Apple is in.
+- For bigger countries with many states, could implment additional filter to filter by states then store. And possible to divide NSEW of USA so its easier for call agents to identify
+- Implement send to email feature
+- Implement google maps so that the filter by postal code can be explored
+- When clicked on another item, the blue border disappears when selecting Model/Finish/Capacity/Store . Instead of buttons, the boxes can be options so that they retain the blue border.
+- Save Item button can be switched to Apple's save icon
 
 ## Contributors
 
