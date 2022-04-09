@@ -35,6 +35,8 @@ A Web App to help call agents at Apple check availability for a product at a phy
 10. Click on any of the store you prefer.
 11. The address and opening hours of the store you have selected will appear on the Modal. You will also see a blue button that enables you to save item to the bottom Modal "Saved Items".
 12. Additional Feature (in progress) - While call agents are speaking with customers, they can save customer's requests and can share with customer this list should the customer be willing to share their personal email.
+    You should end up with an interface like this -
+    <img src="./public/EndProduct.png" width="350"/>
 
 ## 💻 Technologies
 
