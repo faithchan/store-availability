@@ -10,16 +10,16 @@ A Web App to help call agents at Apple check availability for a product at a phy
 
 ## 👨🏻‍💻 Project Structure
 
-- Breakdown the products Apple has into Product Families - using the reference of the tabs on apple website
-- Focus on a product product to develop the feature on. iPhone was chosen and the category was broken down into 13 Pro, 13, SE, 12, 11
+- Breakdown the products Apple has into Product Families - using the reference of the tabs on apple website.
+- Focus on a product to develop the feature on. iPhone was chosen and the category was broken down into 13 Pro, 13, SE, 12, 11.
 - Further narrow on a product that is popular - iPhon 13 Pro was chosen.
-- When the scope has been defined, Ui was created
-- Decide on Tech stack - Nodejs, react framework Nextjs and TypeScript
-- Created Dummy Data
-- Develop Frontend
-- Changes to dummy data based on the final frontend executed
-- Integration and testing
-- Deployment on Vercel
+- When the scope has been defined, Ui was created.
+- Decide on Tech stack - Nodejs, react framework Nextjs and TypeScript.
+- Created Dummy Data.
+- Develop Frontend.
+- Changes to dummy data based on the final frontend executed.
+- Integration and testing.
+- Deployment on Vercel.
 
 ## Follow these steps (Top-Down, Left-Right Approach)
 
