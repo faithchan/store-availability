@@ -1,4 +1,4 @@
-# SEI7 Project 4 - ARKIV
+# Take Home Assignment - Apple
 
 [Apple - Check Store Availability - Demo Link](https://apple-red.vercel.app/store-availability)
 
